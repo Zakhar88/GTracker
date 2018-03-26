@@ -19,13 +19,13 @@ class ExerciseCell: UITableViewCell {
             guard let exercise = exercise else { return }
             nameLabel.text = exercise.name
             if let weight = exercise.weight {
-                weightLabel.text = "\(weight)"
+                weightLabel.text = NumberFormatter().string(from: weight)
             }
             
             if let reps = exercise.reps {
                 infoLabel.text = reps
                 if let sets = exercise.sets {
-                    infoLabel.text = "\(sets) x " + infoLabel.text!
+                    infoLabel.text = NumberFormatter().string(from: sets)! + " x " + infoLabel.text!
                 }
             }
             
