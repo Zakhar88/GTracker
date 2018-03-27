@@ -20,11 +20,7 @@ class ExercisesViewController: UIViewController {
     
     override func viewDidLoad() {
         loadExercises()
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        saveExercises()
-        super.viewWillDisappear(animated)
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -32,6 +28,7 @@ class ExercisesViewController: UIViewController {
             editVC.saveClosure = { exercise in
                 self.exercises.append(exercise)
                 self.exercisesTableView?.reloadData()
+                self.saveExercises()
             }
         }
     }

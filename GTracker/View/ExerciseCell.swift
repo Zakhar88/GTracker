@@ -18,8 +18,8 @@ class ExerciseCell: UITableViewCell {
         didSet {
             guard let exercise = exercise else { return }
             nameLabel.text = exercise.name
-            if let weight = exercise.weight {
-                weightLabel.text = NumberFormatter().string(from: weight)
+            if let weight = exercise.weight, let weightString = NumberFormatter().string(from: weight) {
+                weightLabel.text = weightString + " Кг"
             }
             
             if let reps = exercise.reps {
