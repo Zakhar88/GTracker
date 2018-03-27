@@ -32,19 +32,25 @@ class EditExerciseViewController: UIViewController {
                 repsField.text = "\(reps)"
             }
             
-            title = "new"//DateFormatter().string(from: exercise.date)
+            title = dateFormatter.string(from: exercise.date)
         }
+    }
+    
+    var dateFormatter: DateFormatter {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        let lang = Locale.preferredLanguages.first
+        dateFormatter.locale = Locale(identifier: lang!)
+        return dateFormatter
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        dateFormatter.timeStyle = .none
         title = dateFormatter.string(from: exercise.date)
         
         pickerView.delegate = self
-        pickerView.dataSource = self
+        pickerView.dataSource = self        
     }
     
     @IBAction func saveAction(_ sender: UIBarButtonItem) {
