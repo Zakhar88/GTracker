@@ -65,7 +65,7 @@ class EditExerciseViewController: UIViewController {
         }
         
         if let reps = repsField?.text, !reps.isEmpty,
-            let repsNumber = NumberFormatter().number(from: reps) {
+            let repsNumber = NumberFormatter ().number(from: reps) {
             exercise.reps = repsNumber.stringValue
         }
         exercise.date = Date()
@@ -84,5 +84,10 @@ class EditExerciseViewController: UIViewController {
             repsField.inputView = pickerView
             isPickerViewActive = true
         }
+        repsField.becomeFirstResponder()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 }
