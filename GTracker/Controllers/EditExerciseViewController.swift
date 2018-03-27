@@ -8,13 +8,15 @@
 
 import UIKit
 
-class EditExerciseViewController: UIViewController, UITextFieldDelegate {
+class EditExerciseViewController: UIViewController {
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var weightField: UITextField!
     @IBOutlet weak var setsField: UITextField!
     @IBOutlet weak var repsField: UITextField!
     
+    var pickerView = UIPickerView()
     var saveClosure: ((Exercise)->())?
+    var isPickerViewActive: Bool = false
     
     var exercise = Exercise(name: "") {
         didSet {
@@ -40,7 +42,9 @@ class EditExerciseViewController: UIViewController, UITextFieldDelegate {
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none
         title = dateFormatter.string(from: exercise.date)
-
+        
+        pickerView.delegate = self
+        pickerView.dataSource = self
     }
     
     @IBAction func saveAction(_ sender: UIBarButtonItem) {
@@ -68,5 +72,17 @@ class EditExerciseViewController: UIViewController, UITextFieldDelegate {
         
         saveClosure?(exercise)
         navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func repsTypeChanged(_ sender: UISegmentedControl) {
+        repsField.text = nil
+        if sender.selectedSegmentIndex == 0 {
+            repsField.inputView = nil
+            repsField.endEditing(true)
+            isPickerViewActive = false
+        } else {
+            repsField.inputView = pickerView
+            isPickerViewActive = true
+        }
     }
 }

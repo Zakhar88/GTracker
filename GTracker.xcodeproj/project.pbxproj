@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6BC5BE50206A44B40042A778 /* EditExerciseViewController+PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC5BE4F206A44B40042A778 /* EditExerciseViewController+PickerView.swift */; };
+		6BC5BE52206A4A4D0042A778 /* EditExerciseViewController+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC5BE51206A4A4D0042A778 /* EditExerciseViewController+TextField.swift */; };
 		B18B1943206802D800925F99 /* ExercisesViewController+UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18B1942206802D800925F99 /* ExercisesViewController+UserDefaults.swift */; };
 		B18B19452068098A00925F99 /* ExercisesViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18B19442068098A00925F99 /* ExercisesViewController+TableView.swift */; };
 		B18B194720680B8400925F99 /* ExerciseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18B194620680B8400925F99 /* ExerciseCell.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6BC5BE4F206A44B40042A778 /* EditExerciseViewController+PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditExerciseViewController+PickerView.swift"; sourceTree = "<group>"; };
+		6BC5BE51206A4A4D0042A778 /* EditExerciseViewController+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditExerciseViewController+TextField.swift"; sourceTree = "<group>"; };
 		B18B1942206802D800925F99 /* ExercisesViewController+UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExercisesViewController+UserDefaults.swift"; sourceTree = "<group>"; };
 		B18B19442068098A00925F99 /* ExercisesViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExercisesViewController+TableView.swift"; sourceTree = "<group>"; };
 		B18B194620680B8400925F99 /* ExerciseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCell.swift; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 				B18B19442068098A00925F99 /* ExercisesViewController+TableView.swift */,
 				B18B19482068437400925F99 /* UIViewController+Alerts.swift */,
 				B18B194A2068456000925F99 /* EditExerciseViewController.swift */,
+				6BC5BE4F206A44B40042A778 /* EditExerciseViewController+PickerView.swift */,
+				6BC5BE51206A4A4D0042A778 /* EditExerciseViewController+TextField.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -183,8 +189,10 @@
 				B18B19452068098A00925F99 /* ExercisesViewController+TableView.swift in Sources */,
 				B1A1FE032067FB4600D50E3F /* AppDelegate.swift in Sources */,
 				B1A1FE162067FB8800D50E3F /* Exercise.swift in Sources */,
+				6BC5BE50206A44B40042A778 /* EditExerciseViewController+PickerView.swift in Sources */,
 				B18B1943206802D800925F99 /* ExercisesViewController+UserDefaults.swift in Sources */,
 				B18B194B2068456000925F99 /* EditExerciseViewController.swift in Sources */,
+				6BC5BE52206A4A4D0042A778 /* EditExerciseViewController+TextField.swift in Sources */,
 				B18B194720680B8400925F99 /* ExerciseCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
