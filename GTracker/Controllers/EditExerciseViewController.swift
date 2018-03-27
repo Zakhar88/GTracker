@@ -49,7 +49,7 @@ class EditExerciseViewController: UIViewController {
     
     @IBAction func saveAction(_ sender: UIBarButtonItem) {
         guard let name = nameField?.text, !name.isEmpty else {
-            showAlert(title: "Name can't be empty!")
+            showAlert(title: "Введіть назву вправи!")
             return
         }
         exercise.name = name
