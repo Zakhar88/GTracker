@@ -18,17 +18,21 @@ class ExerciseCell: UITableViewCell {
         didSet {
             guard let exercise = exercise else { return }
             nameLabel.text = exercise.name
-            if let weight = exercise.weight, let weightString = NumberFormatter().string(from: weight) {
-                weightLabel.text = weightString + " Кг"
+            
+            if let weight = exercise.weight {
+                weightLabel.text = String(format: "%g", weight) + " Кг"
             }
             
+            var infoStrings = [String]()
+            if let sets = exercise.sets {
+                infoStrings.append(String(sets))
+            }
             if let reps = exercise.reps {
-                infoLabel.text = reps
-                if let sets = exercise.sets {
-                    infoLabel.text = NumberFormatter().string(from: sets)! + " x " + infoLabel.text!
-                }
+                infoStrings.append(reps)
             }
-            
+            if !infoStrings.isEmpty {
+                infoLabel.text = infoStrings.joined(separator: " x ")
+            }
         }
     }
     

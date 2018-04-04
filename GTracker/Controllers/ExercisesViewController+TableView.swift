@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension ExercisesViewController: UITableViewDataSource {
+extension ExercisesViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return exercises.count
@@ -18,5 +18,10 @@ extension ExercisesViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ExerciseCell", for: indexPath) as! ExerciseCell
         cell.exercise = exercises[indexPath.row]        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "EditSegue", sender: exercises[indexPath.row])
+        exercisesTableView?.deselectRow(at: indexPath, animated: true)
     }
 }

@@ -10,13 +10,15 @@ import Foundation
 
 class Exercise: NSObject, NSCoding {
     
+    var id: String
     var name: String
-    var weight: NSNumber?
-    var sets: NSNumber?
+    var weight: Double?
+    var sets: Int?
     var reps: String?
     var date: Date
     
     init(name: String) {
+        self.id = NSUUID().uuidString
         self.name = name
         self.date = Date()
     }
@@ -28,9 +30,9 @@ class Exercise: NSObject, NSCoding {
         }
         self.init(name: name)
         self.date = date
-        self.weight = aDecoder.decodeObject(forKey: "weight") as? NSNumber
+        self.weight = aDecoder.decodeObject(forKey: "weight") as? Double
         self.reps = aDecoder.decodeObject(forKey: "reps") as? String
-        self.sets = aDecoder.decodeObject(forKey: "sets") as? NSNumber
+        self.sets = aDecoder.decodeObject(forKey: "sets") as? Int
     }
     
     func encode(with aCoder: NSCoder) {

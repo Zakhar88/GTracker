@@ -20,15 +20,26 @@ class ExercisesViewController: UIViewController {
     
     override func viewDidLoad() {
         loadExercises()
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "EditSegue", let editVC = segue.destination as? EditExerciseViewController{
-            editVC.saveClosure = { exercise in
-                self.exercises.append(exercise)
-                self.exercisesTableView?.reloadData()
-                self.saveExercises()
+
+            if let exercise = sender as? Exercise {
+                editVC.exercise = exercise
+                editVC.saveClosure = { changedExercise in
+                    if let changedExerciseIndex = self.exercises.index(where: {$0.id == changedExercise.id}) {
+                        self.exercises[changedExerciseIndex] = changedExercise
+                    }
+                    self.exercisesTableView?.reloadData()
+                    self.saveExercises()
+                }
+            } else {
+                editVC.saveClosure = { exercise in
+                    self.exercises.append(exercise)
+                    self.exercisesTableView?.reloadData()
+                    self.saveExercises()
+                }
             }
         }
     }

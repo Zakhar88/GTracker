@@ -20,6 +20,8 @@ class EditExerciseViewController: UIViewController {
     
     var exercise = Exercise(name: "") {
         didSet {
+            view.layoutIfNeeded()
+            
             nameField.text = exercise.name
 
             if let weight = exercise.weight {
@@ -50,7 +52,7 @@ class EditExerciseViewController: UIViewController {
         title = dateFormatter.string(from: exercise.date)
         
         pickerView.delegate = self
-        pickerView.dataSource = self        
+        pickerView.dataSource = self
     }
     
     @IBAction func saveAction(_ sender: UIBarButtonItem) {
@@ -60,14 +62,14 @@ class EditExerciseViewController: UIViewController {
         }
         exercise.name = name
         
-        if let weight = weightField?.text, !weight.isEmpty,
-            let weightNumber = NumberFormatter().number(from: weight) {
-            exercise.weight = weightNumber
+        if let weightText = weightField?.text, !weightText.isEmpty,
+            let weight = Double(weightText) {
+            exercise.weight = weight
         }
         
-        if let sets = setsField?.text, !sets.isEmpty,
-            let setsNumber = NumberFormatter().number(from: sets) {
-            exercise.sets = setsNumber
+        if let setsText = setsField?.text, !setsText.isEmpty,
+            let sets = Int(setsText) {
+            exercise.sets = sets
         }
         
         if let reps = repsField?.text, !reps.isEmpty,
