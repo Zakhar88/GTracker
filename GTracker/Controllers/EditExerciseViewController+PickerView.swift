@@ -25,16 +25,17 @@ extension EditExerciseViewController: UIPickerViewDataSource, UIPickerViewDelega
         let minutes = pickerView.selectedRow(inComponent: 0)
         let seconds = pickerView.selectedRow(inComponent: 1)
         
-        var repsString = ""
-        
-        if seconds != 0 {
-            repsString = "\(seconds) сек"
-        }
+        var repsStrings = [String]()
+
         
         if minutes != 0 {
-            repsString = "\(minutes) хв " + repsString
+            repsStrings.append("\(minutes) хв")
         }
         
-        repsField.text = repsString
+        if seconds != 0 {
+            repsStrings.append("\(seconds) сек")
+        }
+
+        repsField.text = repsStrings.joined(separator: " ")
     }
 }

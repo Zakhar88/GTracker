@@ -72,9 +72,8 @@ class EditExerciseViewController: UIViewController {
             exercise.sets = sets
         }
         
-        if let reps = repsField?.text, !reps.isEmpty,
-            let repsNumber = NumberFormatter ().number(from: reps) {
-            exercise.reps = repsNumber.stringValue
+        if let reps = repsField?.text, !reps.isEmpty {
+            exercise.reps = reps
         }
         exercise.date = Date()
         
