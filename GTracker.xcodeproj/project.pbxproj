@@ -93,10 +93,10 @@
 				B1A1FE042067FB4600D50E3F /* ExercisesViewController.swift */,
 				B18B1942206802D800925F99 /* ExercisesViewController+UserDefaults.swift */,
 				B18B19442068098A00925F99 /* ExercisesViewController+TableView.swift */,
-				B18B19482068437400925F99 /* UIViewController+Alerts.swift */,
 				B18B194A2068456000925F99 /* EditExerciseViewController.swift */,
 				6BC5BE4F206A44B40042A778 /* EditExerciseViewController+PickerView.swift */,
 				6BC5BE51206A4A4D0042A778 /* EditExerciseViewController+TextField.swift */,
+				B18B19482068437400925F99 /* UIViewController+Alerts.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";

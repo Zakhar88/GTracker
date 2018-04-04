@@ -25,7 +25,8 @@ class EditExerciseViewController: UIViewController {
             nameField.text = exercise.name
 
             if let weight = exercise.weight {
-                weightField.text = "\(weight)"
+                weightField.text = String(format: "%g", weight)
+
             }
             if let sets = exercise.sets {
                 setsField.text = "\(sets)"
