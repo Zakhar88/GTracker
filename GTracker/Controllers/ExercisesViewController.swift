@@ -16,6 +16,7 @@ class ExercisesViewController: UIViewController {
     
     override func viewDidLoad() {
         loadExercises()
+        exercisesTableView?.tableFooterView = UIView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
