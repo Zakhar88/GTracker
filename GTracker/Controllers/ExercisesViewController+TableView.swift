@@ -24,4 +24,12 @@ extension ExercisesViewController: UITableViewDataSource, UITableViewDelegate{
         performSegue(withIdentifier: "EditSegue", sender: exercises[indexPath.row])
         exercisesTableView?.deselectRow(at: indexPath, animated: true)
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            exercises.remove(at: indexPath.row)
+            exercisesTableView?.deleteRows(at: [indexPath], with: .fade)
+            saveExercises()
+        }
+    }
 }

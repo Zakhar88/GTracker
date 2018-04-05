@@ -14,9 +14,6 @@ extension ExercisesViewController {
         if let decodedData = UserDefaults.standard.object(forKey: "Exercises") as? Data,
             let decodedExercises = NSKeyedUnarchiver.unarchiveObject(with: decodedData) as? [Exercise] {
             exercises = decodedExercises
-        } else {
-            //TODO: Remove afer checking
-            showAlert(title: "Failed to load data from UserDefaults")
         }
     }
     

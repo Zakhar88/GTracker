@@ -18,4 +18,11 @@ extension EditExerciseViewController: UITextFieldDelegate {
         }
         return charactersSet.isSuperset(of: CharacterSet(charactersIn: string))
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == nameField {
+            weightField.becomeFirstResponder()
+        }
+        return true
+    }
 }
