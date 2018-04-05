@@ -54,6 +54,10 @@ class EditExerciseViewController: UIViewController {
         
         pickerView.delegate = self
         pickerView.dataSource = self
+        
+        let backGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(back))
+        backGestureRecognizer.direction = .right
+        view.addGestureRecognizer(backGestureRecognizer)
     }
     
     @IBAction func saveAction(_ sender: UIBarButtonItem) {
@@ -97,5 +101,9 @@ class EditExerciseViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+    
+    @objc func back() {
+        navigationController?.popViewController(animated: true)
     }
 }
