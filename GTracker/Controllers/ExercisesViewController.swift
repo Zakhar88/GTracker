@@ -12,14 +12,15 @@ class ExercisesViewController: UIViewController {
     
     @IBOutlet weak var exercisesTableView: UITableView?
     
-    var exercises = [Exercise]() {
-        didSet {
-            exercisesTableView?.reloadData()
-        }
-    }
+    var exercises = [Exercise]()
     
     override func viewDidLoad() {
         loadExercises()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        exercises.sort(by: { $0.date < $1.date })
+        exercisesTableView?.reloadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -31,13 +32,11 @@ class ExercisesViewController: UIViewController {
                     if let changedExerciseIndex = self.exercises.index(where: {$0.id == changedExercise.id}) {
                         self.exercises[changedExerciseIndex] = changedExercise
                     }
-                    self.exercisesTableView?.reloadData()
                     self.saveExercises()
                 }
             } else {
                 editVC.saveClosure = { exercise in
                     self.exercises.append(exercise)
-                    self.exercisesTableView?.reloadData()
                     self.saveExercises()
                 }
             }
