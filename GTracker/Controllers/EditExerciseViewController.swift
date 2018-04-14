@@ -62,7 +62,7 @@ class EditExerciseViewController: UIViewController {
     
     @IBAction func saveAction(_ sender: UIBarButtonItem) {
         guard let name = nameField?.text, !name.isEmpty else {
-            showAlert(title: "Введіть назву вправи!")
+            showAlert(title: NSLocalizedString("enter_exercise_name", comment: ""))
             return
         }
         exercise.name = name

@@ -20,7 +20,7 @@ class ExerciseCell: UITableViewCell {
             nameLabel.text = exercise.name
             
             if let weight = exercise.weight {
-                weightLabel.text = String(format: "%g", weight) + " Кг"
+                weightLabel.text = String(format: "%g", weight) + " " + NSLocalizedString("kilograms", comment: "")
             }
             
             var infoStrings = [String]()

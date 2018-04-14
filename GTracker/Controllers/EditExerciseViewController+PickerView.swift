@@ -18,7 +18,7 @@ extension EditExerciseViewController: UIPickerViewDataSource, UIPickerViewDelega
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return "\(row)" + (component == 0 ? " хв" : " сек")
+        return "\(row)" + (component == 0 ? NSLocalizedString("minutes", comment: "") : NSLocalizedString("seconds", comment: ""))
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -29,11 +29,11 @@ extension EditExerciseViewController: UIPickerViewDataSource, UIPickerViewDelega
 
         
         if minutes != 0 {
-            repsStrings.append("\(minutes) хв")
+            repsStrings.append("\(minutes)" + NSLocalizedString("minutes", comment: ""))
         }
         
         if seconds != 0 {
-            repsStrings.append("\(seconds) сек")
+            repsStrings.append("\(seconds)" + NSLocalizedString("seconds", comment: ""))
         }
 
         repsField.text = repsStrings.joined(separator: " ")

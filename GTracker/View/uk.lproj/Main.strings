@@ -1,0 +1,27 @@
+
+/* Class = "UINavigationItem"; title = "GTracker"; ObjectID = "9Vn-0d-Rt2"; */
+"9Vn-0d-Rt2.title" = "GTracker";
+
+/* Class = "UITextField"; placeholder = "Weight"; ObjectID = "MKt-Ii-Vti"; */
+"MKt-Ii-Vti.placeholder" = "Вага";
+
+/* Class = "UITextField"; placeholder = "Sets"; ObjectID = "OMm-cu-qzN"; */
+"OMm-cu-qzN.placeholder" = "Підходи";
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "SA6-Cm-UfF"; */
+"SA6-Cm-UfF.title" = "Title";
+
+/* Class = "UITextField"; placeholder = "Exercise"; ObjectID = "WAc-Wn-FEp"; */
+"WAc-Wn-FEp.placeholder" = "Вправа";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "arU-Gp-ECq"; */
+"arU-Gp-ECq.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Reps"; ObjectID = "laJ-gF-1FM"; */
+"laJ-gF-1FM.placeholder" = "Повторення";
+
+/* Class = "UISegmentedControl"; sZx-bW-lkV.segmentTitles[0] = "Number"; ObjectID = "sZx-bW-lkV"; */
+"sZx-bW-lkV.segmentTitles[0]" = "Кількість";
+
+/* Class = "UISegmentedControl"; sZx-bW-lkV.segmentTitles[1] = "Duration"; ObjectID = "sZx-bW-lkV"; */
+"sZx-bW-lkV.segmentTitles[1]" = "Тривалість";

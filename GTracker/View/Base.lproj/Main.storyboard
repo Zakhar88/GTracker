@@ -90,7 +90,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="GTracker" id="9Vn-0d-Rt2">
-                        <barButtonItem key="backBarButtonItem" title="Назад" id="AMU-Fd-DG7"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="CLh-YP-64Y">
                             <connections>
                                 <segue destination="TXN-HA-z6P" kind="show" identifier="EditSegue" id="c2U-9R-p41"/>
@@ -113,7 +112,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Вправа" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WAc-Wn-FEp">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Exercise" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WAc-Wn-FEp">
                                 <rect key="frame" x="20" y="84" width="335" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -122,7 +121,7 @@
                                     <outlet property="delegate" destination="TXN-HA-z6P" id="pu9-wD-IZ4"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Вага" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MKt-Ii-Vti">
+                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MKt-Ii-Vti">
                                 <rect key="frame" x="20" y="134" width="335" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -131,7 +130,7 @@
                                     <outlet property="delegate" destination="TXN-HA-z6P" id="uPy-PD-Fc2"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Підходи" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OMm-cu-qzN">
+                            <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sets" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OMm-cu-qzN">
                                 <rect key="frame" x="20" y="184" width="335" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -140,7 +139,7 @@
                                     <outlet property="delegate" destination="TXN-HA-z6P" id="dHT-SU-u3F"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Повторення" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="laJ-gF-1FM">
+                            <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Reps" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="laJ-gF-1FM">
                                 <rect key="frame" x="20" y="272" width="335" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -152,8 +151,8 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sZx-bW-lkV">
                                 <rect key="frame" x="20" y="234" width="335" height="29"/>
                                 <segments>
-                                    <segment title="Кількість"/>
-                                    <segment title="Час"/>
+                                    <segment title="Number"/>
+                                    <segment title="Duration"/>
                                 </segments>
                                 <connections>
                                     <action selector="repsTypeChanged:" destination="TXN-HA-z6P" eventType="valueChanged" id="c1Z-cW-GKx"/>
@@ -181,7 +180,7 @@
                         <viewLayoutGuide key="safeArea" id="csB-TP-MVM"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="SA6-Cm-UfF">
-                        <barButtonItem key="rightBarButtonItem" title="Зберегти" id="7xA-en-CrY">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="7xA-en-CrY">
                             <connections>
                                 <action selector="saveAction:" destination="TXN-HA-z6P" id="Ug9-XF-KNq"/>
                             </connections>

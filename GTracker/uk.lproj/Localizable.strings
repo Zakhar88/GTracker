@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  GTracker
+
+  Created by 3axap on 14.04.18.
+  Copyright © 2018 3axap. All rights reserved.
+*/
+
+"enter_exercise_name" = "Введіть назву вправи!";
+"minutes" = " хв";
+"seconds" = " сек";
+"kilograms" = " Кг";
